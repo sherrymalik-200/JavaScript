@@ -52,7 +52,189 @@ console.log(x);
 let x = 10;
 
 Q.8 if var, let and const all hoisted, then why not undefined  value assign  to const or let?
-Javascript creator wanted to avoid bugs tht happend with var
+Javascript creator wanted to avoid bugs tht happend with var, if let and const are also auto-assigned undefined, developer might accidentally use them before initilization. TDZ forces us to declare first, then use.
+
+q.9 what is Temporal dead zone? (TDZ)
+temporal dead zone is the period where let and const exist but cannot be accessed until initilized.like,
+console.log(x);
+let x =10;
+Q.10 .   What is a primitive data type?
+A primitive data type is a basic data type that stores the actual value directly.
+
+Example.  
+string, number, boolean, null, undefined, symbol, bigint.
+
+Q.11 What is a refrence data type?
+A refrence data type stores a refrence (memory address) to the value, not the actual value.
+Example.
+Object,  Array,  Function,  Date etc.
+
+Q.12 Difference b/w primitive data type and refrene data type?
+Primitive = copied by value, independent.
+Refrence = copied by refrence, linked to same object.
+
+in primitive data type when copy the first value, chaning in second valued not affect the fist one.
+but in refrence data type when copy the value, then changing the copied value affect.
+
+Q.13 Difference b/w null and undefined?
+
+
+Q.14 Type Coercion?
+Js auto converts types in some operation.
+5+"1" = 51  becuase + add and concatenate both.
+
+Local vs Strict Equality.
+==   compare value with type conversion
+=== compare vale +type (no conversion)
+
+5 =="5"   True
+5 ==="5" False
+Always prefer ===  for accuarte comparisions.
+
+NaN (not a number)
+
+typeof(NaN) = number //
+Even though it means not a number, NaN is actually of type number, this is because operation like 0/0  or parseInt still produce a numeric result just an invalid one.
+
+Truthy and False Values.
+
+falsy values.
+false, 0, "", null, undefined, NaN
+
+common confusion. 
+type of null is "Object"  this is a bug
+undefined means the variable was never assigned.
+null means you intentionally set to nothing.
+"5"+1 =51 but '5'-4 =1
+
+Q. 15.  Operators
+Operators are special symbols or keywords used to perform operations on values.(operands)
+used operator in calculations, comparisions,  logic, assignment and even type checks.
+
+Q.16 Control flow statement?
+Control flow decides which code runs, when it runs, and how many times it run. its like a decision-making + direcion,
+if operators are the verbs mean action or work then control flow is the traffic signal which control the work flow.
+if else,   if else if else,  switch case,  early return patterns, 
+
+if else.  (used when one condition checks like yes or no).
+
+if ,else if,  else (used when two or more then two condition checks)
+switch case.
+used for checking  one variable against many values.
+
+Early return pattern(used in function to exit early if some condition fails.)
+early return pattern avoid deep nesting and makes logic cleaner.
+
+Q. 17..  Loops.
+used to perform repeatitive task.
+for, while, do while, for of, for each, for in,
+
+for. (used when number of iteration is known).
+while. (used when number of iteration is unknown)
+do-while(used when number of iteration is unknown and run at least once even if condition is false)
+for-of(used for arrays and strings.)
+forEach(used for arrays but cant break or return and continue)
+for in (used for objects)
+
+Q.18.. Function.
+function are blocks of reuseable logic,
+instead of repeating the task again and again. wrap it in a function and reuse it with differenct inputs. Function keep code clean, DRY, and reuseable.
+
+Q.19  Difference b/w parameter vs arguments?
+parameter:  variable in function defination.
+argument: actual value given when a function called. 
+
+Q.20  What is function decleration?
+function declaration is defining a function, with the function keyword, and it is hoisted.
+Q.21 What is function expression?
+defining a function inside a variable. and its not hoisted.
+
+Q.21 What is First-class function?
+Js function are first class citizen, meaning they can be stored in variable. passed as argument, and returned from other function just like anyother value.
+
+Note: This property is the foundation of callbacks, High Order function, promises, async/await, and functional programming.
+
+Q.22 What is High order function?
+A high order function is a function that either takes another function as input, returns a function or both. They allow powerfull abstractins like callbacks and functional programming.
+
+Q.23 Lexical scope, closures 
+Lixical scope, Decide karta hai ke inner function ko outer function ke variable ki access hai(sirf likhne ki jaga dekh kar).
+function outer() {
+  let x = 10;
+
+  function inner() {
+    console.log(x);  // inner ko outer ke variable ki access hai
+  }
+
+  return inner;
+}
+
+let fn = outer();
+fn(); // 10
+
+Q.24 Closures. Wo mechanism  hai, jo ensure karta hai ke jab outer function chal kar khatam bhe ho jaye. inner function ke pass outer ke variable ki access phir bhe ho.
+function outer() {
+  let counter = 0;   // outer ka variable
+
+  function inner() {
+    counter++;       // inner ko outer ka variable yaad hai
+    console.log(counter);
+  }
+
+  return inner;      // outer return kar raha hai inner
+}
+
+let fn = outer();   // outer execute hua
+fn(); // 1
+fn(); // 2
+fn(); // 3
+
+
+Q.25  What is IIFE(immediately invoked function expression)
+An IIFE is a function in Js that runs immediately after its created.
+Q.26 Why used IIFE?
+to avoid polluting global scope.
+to initilize code once.(setup tasks, configs)
+often used in modules & Js pattern.
+
+Q.27  Array.
+
+An array is a collection of items or values, stored in single variable, and each value can be accessed using its index. (starting from 0).
+
+Iteration Method,
+map();
+Return a new array with modified values.
+
+
+Q.28.   DOM (Document Object Model)
+
+Document object model i mean dom ek tree like structure hai jo ke browerser bnata hai HTML page ka.
+js ke through hum is tree ko read, change, add ya delete kar sagte hain.
+
+Document
+ └── html
+     └── body
+         ├── h1 ("Hello Sheraz!")
+         └── button ("Click Me")
+
+sab sy pahle hum kisi bhe way sey html ko select karte hain phir isko manipulate karte hain. 4 option hain selec tarike hain. 
+1. document.getElementById();
+2. document.getElementsByClassName();
+3. document.querySelector();
+4. document.querySelectorAll();
+
+getElementById("a") → only works with id, returns one element.
+
+getElementsByClassName("fc") → only works with class, returns a live HTMLCollection.
+
+querySelector / querySelectorAll → works with any CSS selector (id, class, tag, nested, attributes, etc).
+
+
+
+
+
+
+
 
 
 
