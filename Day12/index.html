@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Downloading Simulation</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="download-card" role="region" aria-label="Download simulation">
+    <div class="header">
+      <div class="title">Download Simulation</div>
+      <div id="status" class="status">Ready</div>
+    </div>
+
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar">
+        <div id="fill" class="fill"></div>
+      </div>
+      <div id="percent" class="percent">0%</div>
+    </div>
+
+    <div class="controls">
+      <button id="start" class="start">Start</button>
+      <button id="pause" class="pause">Pause</button>
+      <button id="reset" class="reset">Reset</button>
+      <button id="ffwd" class="ffwd">+10%</button>
+
+      <select id="speed">
+        <option value="0.5">Speed: Slow</option>
+        <option value="1" selected>Speed: Normal</option>
+        <option value="2">Speed: Fast</option>
+        <option value="4">Speed: Turbo</option>
+      </select>
+    </div>
+
+    <div class="hint">Uses <code>setInterval</code> to tick progress and <code>setTimeout</code> to stage delays.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
