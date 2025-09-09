@@ -301,7 +301,10 @@ Q. 40 what is callback pattern and callback hell?
 The callback pattern means passing a function as an argument to be executed later, often for async task. callback hell happens when many callback are nested, creating unreadable and unmaintainable code.
 ## Q.41 – Promises, and async/await<br>
 Promises = A promises is an object that represents a value that will be available now, later, or never.
-# Pending  = still workings
+**Async/Await**  
+- `async` makes a function return a promise.  
+- `await` makes JavaScript wait until the promise settles.  
+- Cleaner alternative to `.then()` and `.catch()`.
 
 
 
