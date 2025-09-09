@@ -78,6 +78,8 @@ but in refrence data type when copy the value, then changing the copied value af
 
 Q.13 Difference b/w null and undefined?
 
+undefined = a variable tht is declared but not assigned any value. (undefined means "not yet assigned")
+null = A variable that is intentionally assigned empty value. (null means "assigned nothing)
 
 Q.14 Type Coercion?
 Js auto converts types in some operation.
@@ -159,6 +161,10 @@ A high order function is a function that either takes another function as input,
 
 Q.23 Lexical scope, closures 
 Lixical scope, Decide karta hai ke inner function ko outer function ke variable ki access hai(sirf likhne ki jaga dekh kar).
+
+Lexical Scope → Scope decided by where function is defined (code placement).
+
+Dynamic Scope → Scope decided by where function is called (call site).
 function outer() {
   let x = 10;
 
@@ -228,6 +234,75 @@ getElementById("a") → only works with id, returns one element.
 getElementsByClassName("fc") → only works with class, returns a live HTMLCollection.
 
 querySelector / querySelectorAll → works with any CSS selector (id, class, tag, nested, attributes, etc).
+
+q. 29 Event and Event listening
+An event is something that happens in the browser.
+e.g
+A user clicks a button. click button event
+a key is pressed => keypress event
+
+Event Listening.
+we tell the browser "when this event happens on this element, run this function."
+this is done using addEventListener.
+
+Q. 30 Forms and forms validation.
+A form in html is used to collect user input.
+forms validation
+checking user input is correct and acceptable.
+
+Q.31 Difference b/w client side validation and server side validation?
+validation happens in the browser.(before sending data to the server).
+server side validation.
+validation happens on the server. (backend after data is submitted)
+
+Q. 32. setTimeout() = runs a function once after a delay(in milliseconds)
+setInterval() = runs a function repeatedly after every dealy (loop-like)
+clearTimeout() = cancels a setTimeout before its runs
+clearInterval() = stops a running interval.
+
+Q.33 localStorage, sessionStorage, cookies
+localStorage = Permanent data store in the browser, even broswer closed or system restart. (~5MB to 10MB)
+sessionStorage = Temporary data store in the browser, when tab or browser closed data remove.(~5MB)
+cookies = cookies store small of piece of data apprismately (~4kb) in the browser. sent to the server with every request. 
+
+Q.34 JSON.stringify(),  JSON.parse().
+JSON.stringify() = Converts a JS object/array into JSON string. Usefull when sending data to server or saving in localstorage. 
+JSON.parse() = convert a json string back into js object/array. usefull when receiving data from a server or reading from storage. 
+
+Q.35 this keyword in JS.
+this means the current execution context. in global scope its window(or undefined in strict), in an object method, its the object. in the class its instance, in an event handlers its the element. Arrow function dont have their own this. they use the outer scope.
+
+Q.36. Execution Context.  means the environment in which code is running right now. -- who is running it, and what variable/objects are avaiable at that moment.
+
+Q. 37 call(), apply(), bind() = call, apply, and bind are used to set this explicitly.
+call. -> invoke function immediately with arguments listed.
+apply -> invoke function immediately with arguments array
+bind -> doesn't call immediately, return a new function with fixed "this".
+⚡ Easy trick to remember:
+
+call = comma (args given separately)
+
+apply = array
+
+bind = back later (creates function to use later)
+
+Q. 38 Prototype 
+prototype is the mechanisam in js that allows objects to share methods and properties. its how inheritance works. objects can acess properties from their prototype chain.
+classical inheritace vs prototype.  
+in classical inhertance class inherits from class. but in prototype objects inherit from object.
+
+Q.39 What sync and async?
+sync = code runs line by line, one task at a time, Next line wont execute until the current one finishes.
+async = tasks can start now but finish later, without blocking the rest of the code.
+used for time consuming operations(Api calls, DB queries, file reading)
+JS is sync by default(single threaded, one line at a time). async programming lets Js handle long tasks without blocking, using callbacks, promises, or async/await.
+
+Q. 40 what is callback pattern and callback hell?
+The callback pattern means passing a function as an argument to be executed later, often for async task. callback hell happens when many callback are nested, creating unreadable and unmaintainable code.
+Q.41 Promises, and async/ await.
+Promises = A promises is an object that represents a value that will be available now, later, or never.
+# Pending  = still working
+
 
 
 
