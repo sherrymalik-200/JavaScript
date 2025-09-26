@@ -2,7 +2,17 @@
 #### Q. 1 what is variable?
 - A variable is a like label container used to store value or data in memory.
 - const name = "sheraz"
-- const dob = 23-03---- 
+- const dob = 23-03----
+### how many stages of variable and funcion?
+
+variable have 3 stages 
+  - Decleration phase: let a;
+  - initilization phase: a=10;
+  - usage phase: console.log(a);
+but function have 2 stages?
+- definatin phase: function add(){}
+- calling phase: add()
+- so in hoisitng calling phase at top for function and variable decleration phase at top.
 #### Q.2 why do we need variable?
 if we dont store value, we cant reuse them.
 
@@ -44,51 +54,61 @@ console.log(b); // ReferenceError
 let b = 20;
 ```
 
-Q.6 Does hoisitng work same for let and const?
-All three var, let and const are hoisted, but there's a differnce.
-var hoisted with undefined value.
-let, and const hoisted but kept in Temporal  Dead Zone untill initilized.
-var: hoisted + initilized as undefined 
-let/const: but not initilized(TZD).
+#### Q.6 Does hoisitng work same for let and const?
 
-Q.7 what is TDZ?
-unsafe zone b/w hoisting and initilization.
+All three var, let and const are hoisted, but there's a differnce.
+- var hoisted with undefined value.
+- let, and const hoisted but kept in Temporal  Dead Zone untill initilized.
+#### Q: Is hoisting a good or bad thing in JavaScript?<br>
+**✅ Good part (Functions):**
+- You can call a function before its declaration.
+- Makes code flexible and organized.
+
+```js
+greet("Sheraz"); // Works because of hoisting
+
+function greet(name) {
+  console.log("Hello " + name);
+}
+```
+not good for variable becuase confusing behaviour. undefined value assign to var. not catch error
+
+#### Q.7 what is TDZ?
+unsafe zone b/w hoisting and initilization. and cant use let and const throw refrence error.
 use first then initialized, so throw refrence error. accesing before initilization is in the tdz.
 
 console.log(x);
 let x = 10;
 
-Q.8 if var, let and const all hoisted, then why not undefined  value assign  to const or let?
+#### Q.8 if var, let and const all hoisted, then why not undefined  value assign  to const or let?
+
 Javascript creator wanted to avoid bugs tht happend with var, if let and const are also auto-assigned undefined, developer might accidentally use them before initilization. TDZ forces us to declare first, then use.
 
-q.9 what is Temporal dead zone? (TDZ)
-temporal dead zone is the period where let and const exist but cannot be accessed until initilized.like,
-console.log(x);
-let x =10;
-Q.10 .   What is a primitive data type?
+#### Q.10 .   What is a primitive data type?
 A primitive data type is a basic data type that stores the actual value directly.
 
 Example.  
 string, number, boolean, null, undefined, symbol, bigint.
 
-Q.11 What is a refrence data type?
+#### Q.11 What is a refrence data type?
+
 A refrence data type stores a refrence (memory address) to the value, not the actual value.
 Example.
-Object,  Array,  Function,  Date etc.
+- Object,  Array,  Function,  Date etc.
 
-Q.12 Difference b/w primitive data type and refrene data type?
+#### Q.12 Difference b/w primitive data type and refrence data type?
 Primitive = copied by value, independent.
 Refrence = copied by refrence, linked to same object.
 
 in primitive data type when copy the first value, chaning in second valued not affect the fist one.
 but in refrence data type when copy the value, then changing the copied value affect.
 
-Q.13 Difference b/w null and undefined?
+#### Q.13 Difference b/w null and undefined?
 
 undefined = a variable tht is declared but not assigned any value. (undefined means "not yet assigned")
-null = A variable that is intentionally assigned empty value. (null means "assigned nothing)
+null = A variable that is intentionally assigned empty value. (null means "assigned nothing")
 
-Q.14 Type Coercion?
+#### Q.14 Type Coercion?
 Js auto converts types in some operation.
 5+"1" = 51  becuase + add and concatenate both.
 
@@ -102,11 +122,13 @@ Always prefer ===  for accuarte comparisions.
 
 NaN (not a number)
 
-typeof(NaN) = number //
+#### typeof(NaN) = number //
+
 Even though it means not a number, NaN is actually of type number, this is because operation like 0/0  or parseInt still produce a numeric result just an invalid one.
 
-Truthy and False Values.
+#### Truthy and False Values.
 
+except falsy value all value is truthy.
 falsy values.
 false, 0, "", null, undefined, NaN
 
@@ -116,11 +138,12 @@ undefined means the variable was never assigned.
 null means you intentionally set to nothing.
 "5"+1 =51 but '5'-4 =1
 
-Q. 15.  Operators
+#### Q. 15.  Operators
+
 Operators are special symbols or keywords used to perform operations on values.(operands)
 used operator in calculations, comparisions,  logic, assignment and even type checks.
 
-Q.16 Control flow statement?
+#### Q.16 Control flow statement?
 Control flow decides which code runs, when it runs, and how many times it run. its like a decision-making + direcion,
 if operators are the verbs mean action or work then control flow is the traffic signal which control the work flow.
 if else,   if else if else,  switch case,  early return patterns, 
