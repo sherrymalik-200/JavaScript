@@ -1,4 +1,4 @@
-```js
+
 #### Q. 1 what is variable?
 - A variable is a like label container used to store value or data in memory.
 - const name = "sheraz"
@@ -25,7 +25,8 @@ function test() {
   console.log(y); // ❌ Error (block-scoped)
   console.log(z); // ❌ Error
 }
-test();```
+test();
+js```
 
 Q.4 how many types of block or explain global scope, fucnction, and block-scope or differnce?
 
