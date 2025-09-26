@@ -145,23 +145,30 @@ used operator in calculations, comparisions,  logic, assignment and even type ch
 
 #### Q.16 Control flow statement?
 Control flow decides which code runs, when it runs, and how many times it run. its like a decision-making + direcion,
-if operators are the verbs mean action or work then control flow is the traffic signal which control the work flow.
-if else,   if else if else,  switch case,  early return patterns, 
+#### control flow statment have 3 category. 1. conditional statment(if, if else, if..else if..else, switch) 2. loops(repetative)(for, while, do while,for of, for each, for in) 3.(jumping statments)(break, continue, return, throw)
 
-if else.  (used when one condition checks like yes or no).
+1. Conditional statment
+if, if else,   if.. else if.. else,  switch case,  early return patterns, 
 
-if ,else if,  else (used when two or more then two condition checks)
-switch case.
+- if else.  (used when one condition checks like yes or no).
+
+- if ,else if,  else (used when two or more then two condition checks)
+- switch case.
 used for checking  one variable against many values.
 
-Early return pattern(used in function to exit early if some condition fails.)
+- Early return pattern(used in function to exit early if some condition fails.)
 early return pattern avoid deep nesting and makes logic cleaner.
 
-Q. 17..  Loops.
+#### Q. 17..  Loops.
 used to perform repeatitive task.
 for, while, do while, for of, for each, for in,
 
 for. (used when number of iteration is known).
+```js
+for (let i = 1; i <= 5; i++) {
+  console.log("Number:", i);
+} ```
+
 while. (used when number of iteration is unknown)
 do-while(used when number of iteration is unknown and run at least once even if condition is false)
 for-of(used for arrays and strings.)
