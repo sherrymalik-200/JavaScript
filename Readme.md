@@ -24,8 +24,7 @@ function test() {
   console.log(y); // ❌ Error (block-scoped)
   console.log(z); // ❌ Error
 }
-test();
-```js
+test();```js
 
 Q.4 how many types of block or explain global scope, fucnction, and block-scope or differnce?
 
