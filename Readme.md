@@ -145,7 +145,10 @@ used operator in calculations, comparisions,  logic, assignment and even type ch
 
 #### Q.16 Control flow statement?
 Control flow decides which code runs, when it runs, and how many times it run. its like a decision-making + direcion,
-#### control flow statment have 3 category. 1. conditional statment(if, if else, if..else if..else, switch) 2. loops(repetative)(for, while, do while,for of, for each, for in) 3.(jumping statments)(break, continue, return, throw)
+#### control flow statment have 3 category. 
+1.  conditional statment(if, if else, if..else if..else, switch)
+2.  loops(repetative)(for, while, do while,for of, for each, for in)
+3. (jumping statments)(break, continue, return, throw)
 
 1. Conditional statment
 if, if else,   if.. else if.. else,  switch case,  early return patterns, 
