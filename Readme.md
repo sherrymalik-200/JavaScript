@@ -13,11 +13,20 @@ if we dont store value, we cant reuse them.
 - const: block-scoped, not hoisted, cannot be reassigned and redeclared.
 
 example.
-if(true){
+```js
+function test() {
+  if (true) {
     var x = 10;
-    let y = 10;
-    const z = 10;
+    let y = 20;
+    const z = 30;
+  }
+  console.log(x); works fine print
+  console.log(y); // ❌ Error (block-scoped)
+  console.log(z); // ❌ Error
 }
+test();
+
+```js
 
 Q.4 how many types of block or explain global scope, fucnction, and block-scope or differnce?
 
