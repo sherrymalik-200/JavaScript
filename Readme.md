@@ -28,12 +28,11 @@ function test() {
 test();
 ```
 
-Q.4 how many types of block or explain global scope, fucnction, and block-scope or differnce?
-
+#### Q.4 how many types of block or explain global scope, fucnction, and block-scope or differnce?
 scope mean visibility
-global scope.  variable declared outside any function/ block. Accessible everywhere.
-function scope.  varialb declared inside a function, Accessible only inside that function.
-block-scope: variable declared inside of block {}, Acessible only inside that block.
+- global scope.  variable declared outside any function/ block. Accessible everywhere.
+- function scope.  varialb declared inside a function, Accessible only inside that function.
+- block-scope: variable declared inside of block {}, Acessible only inside that block.
 
 Q.5 What is hoisting  in Javascript?
 hoisting  means javascript moves variable and function decleration to the top of their scope before execution.
