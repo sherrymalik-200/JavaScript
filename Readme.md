@@ -1,3 +1,4 @@
+```js
 #### Q. 1 what is variable?
 - A variable is a like label container used to store value or data in memory.
 - const name = "sheraz"
