@@ -25,7 +25,6 @@ function test() {
   console.log(z); // ❌ Error
 }
 test();
-
 ```js
 
 Q.4 how many types of block or explain global scope, fucnction, and block-scope or differnce?
