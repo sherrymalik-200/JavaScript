@@ -166,18 +166,39 @@ early return pattern avoid deep nesting and makes logic cleaner.
 used to perform repeatitive task.
 for, while, do while, for of, for each, for in,
 
-for. (used when number of iteration is known).
+- for. (used when number of iteration is known).
 ```js
 for (let i = 1; i <= 5; i++) {
   console.log("Number:", i);
 }
 ```
 
-while. (used when number of iteration is unknown)
-do-while(used when number of iteration is unknown and run at least once even if condition is false)
-for-of(used for arrays and strings.)
-forEach(used for arrays but cant break or return and continue)
-for in (used for objects)
+- while. (used when number of iteration is unknown, but repeat until a condition is true.)
+```js
+let money = 0;
+while (money < 100) {
+  money += 20; // add 20 each time
+  console.log("Money:", money);
+}
+```
+- do-while(used when number of iteration is unknown and run at least once even if condition is false)
+- for-of(used for arrays and strings.)
+```js
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let fruit of fruits) {
+  console.log("Fruit:", fruit);
+}
+```
+- forEach(used for arrays but cant break or return and continue)(recommend not used)
+- for in (used for objects)
+```js
+let person = { name: "Sheraz", age: 28, city: "Karachi" };
+
+for (let key in person) {
+  console.log(key, ":", person[key]);
+}
+```
 
 Q.18.. Function.
 function are blocks of reuseable logic,
