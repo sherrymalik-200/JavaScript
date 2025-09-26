@@ -167,7 +167,8 @@ for. (used when number of iteration is known).
 ```js
 for (let i = 1; i <= 5; i++) {
   console.log("Number:", i);
-} ```
+}
+```
 
 while. (used when number of iteration is unknown)
 do-while(used when number of iteration is unknown and run at least once even if condition is false)
