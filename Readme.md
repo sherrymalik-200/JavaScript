@@ -34,7 +34,7 @@ scope mean visibility
 - function scope.  varialb declared inside a function, Accessible only inside that function.
 - block-scope: variable declared inside of block {}, Acessible only inside that block.
 
-Q.5 What is hoisting  in Javascript?
+#### Q.5 What is hoisting  in Javascript? </br>
 hoisting  means javascript moves variable and function decleration to the top of their scope before execution.
 ```js
 console.log(a); // undefined (confusing behavior)
