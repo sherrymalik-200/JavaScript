@@ -1,15 +1,16 @@
 #### Q. 1 what is variable?
-- A variable is a like container used to store value or data in memory.
-- let name = "sheraz"
+- A variable is a like label container used to store value or data in memory.
+- const name = "sheraz"
+- const dob = 23-03---- 
 #### Q.2 why do we need variable?
 if we dont store value, we cant reuse them.
 
-Q.3 What is the difference b/w var, let and const.
-var is function-scoped, let and const are block-scoped.
-explain this,
-var: function scoped, hoisted , can be redeclared and reassignment.
-let: block-scoped, not hoisted, can be reassigned but not redeclared in the same scope.
-const: block-scoped, not hoisted, cannot be reassigned and redeclared.
+#### Q.3 What is the difference b/w var, let and const.
+- var is function-scoped, let and const are block-scoped.
+#### explain this,
+- var: function scoped, hoisted , can be redeclared and reassignment.
+- let: block-scoped, not hoisted, can be reassigned but not redeclared in the same scope.
+- const: block-scoped, not hoisted, cannot be reassigned and redeclared.
 
 example.
 if(true){
