@@ -1,4 +1,4 @@
-### Q. 1 what is variable?
+##### Q. 1 what is variable?
 - A variable is a like container used to store value or data in memory.
 - let name = "sheraz"
 ## Q.2 why do we need variable?
