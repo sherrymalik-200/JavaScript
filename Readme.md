@@ -36,15 +36,13 @@ scope mean visibility
 
 Q.5 What is hoisting  in Javascript?
 hoisting  means javascript moves variable and function decleration to the top of their scope before execution.
-
-console.log(a);
+```js
+console.log(a); // undefined (confusing behavior)
 var a = 10;
 
-Here var is hoisted, so javascript treats like this..... 
-
-var a;
-console.log(a);
-a = 10;
+console.log(b); // ReferenceError
+let b = 20;
+```
 
 Q.6 Does hoisitng work same for let and const?
 All three var, let and const are hoisted, but there's a differnce.
