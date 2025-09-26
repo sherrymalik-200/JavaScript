@@ -1,5 +1,5 @@
-Q. 1 what is variable?
-A variable is a container used to store data in memory so, we can or update it later.
+## Q. 1 what is variable?
+- A variable is a container used to store data in memory so, we can or update it later.
 let name = "sheraz"
 Q.2 why do we need variable?
 if we dont store value, we cant reuse them.
