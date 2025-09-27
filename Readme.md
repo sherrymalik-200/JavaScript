@@ -87,8 +87,19 @@ Javascript creator wanted to avoid bugs tht happend with var, if let and const a
 #### Q.10 .   What is a primitive data type?
 A primitive data type is a basic data type that stores the actual value directly.
 
-Example.  
-string, number, boolean, null, undefined, symbol, bigint.
+Example.  Number → let age = 28;
+
+String → let name = "Sheraz";
+
+Boolean → let isActive = true;
+
+Undefined → let x; // no value assigned
+
+Null → let y = null;
+
+Symbol → let id = Symbol("unique");
+
+BigInt → let big = 12345678901234567890n;
 
 #### Q.11 What is a refrence data type?
 
@@ -156,8 +167,25 @@ if, if else,   if.. else if.. else,  switch case,  early return patterns,
 - if else.  (used when one condition checks like yes or no).
 
 - if ,else if,  else (used when two or more then two condition checks)
-- switch case.
+- switch case.(alternative of if..else if.. else)
 used for checking  one variable against many values.
+#### what is differnce b/w if elseif else and switch?
+if, elseif, else - in if elseif else, condition check one by one from top to bottom.
+switch. - program does not check case one by one, directly jump to the matching case.
+
+✅ Use if...else if...else when:
+
+You need to check ranges (e.g., age, prices, dates).
+
+You need complex conditions (&&, ||, multiple variables).
+
+Example: if (age > 18 && age<30 ) {...}
+
+✅ Use switch when:
+
+You’re checking one variable against fixed values.
+
+Options are like menu selections, enums, roles, commands, or status codes.
 
 - Early return pattern(used in function to exit early if some condition fails.)
 early return pattern avoid deep nesting and makes logic cleaner.
@@ -168,6 +196,10 @@ for, while, do while, for of, for each, for in,
 
 - for. (used when number of iteration is known).
 ```js
+for (initialization; condition; increment/decrement) {
+  // code block
+}
+
 for (let i = 1; i <= 5; i++) {
   console.log("Number:", i);
 }
@@ -181,16 +213,18 @@ while (money < 100) {
   console.log("Money:", money);
 }
 ```
-- do-while(used when number of iteration is unknown and run at least once even if condition is false)
-- for-of(used for arrays and strings.)
+- do-while(used when number of iteration is unknown and run at least once even  condition is false)
 ```js
-let fruits = ["Apple", "Banana", "Mango"];
+pin = "1122"
+do{
+    console.log("welcome to BANK ATM")
+    console.log("enter your card please");
+    console.log("enter your pin please")
+}while(pin!="1122");
 
-for (let fruit of fruits) {
-  console.log("Fruit:", fruit);
-}
+console.log("sorry your pin is incorrect!!!")
 ```
-- forEach(used for arrays but cant break or return and continue)(recommend not used)
+
 - for in (used for objects)
 ```js
 let person = { name: "Sheraz", age: 28, city: "Karachi" };
@@ -199,6 +233,50 @@ for (let key in person) {
   console.log(key, ":", person[key]);
 }
 ```
+- for-of(used for arrays, strings, maps, sets, etc)
+```js
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let fruit of fruits) {
+  console.log("Fruit:", fruit);
+}
+```
+- forEach(used for arrays but cant break or return and continue)(recommend not used)
+
+### Array.
+
+An array is a collection of items or values, stored in single variable, and each value can be accessed using its index. (starting from 0).
+```js
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits[0]); // Apple
+console.log(fruits[2]); // Mango
+```
+ Why Use Arrays?
+
+Arrays are useful when you want to store and manage a collection of data instead of creating multiple separate variables.
+Without an array ❌:
+
+let fruit1 = "Apple";
+let fruit2 = "Banana";
+let fruit3 = "Mango";
+
+Easier to loop through values.
+
+Easier to add/remove/update items.
+
+Saves time and makes code cleaner.
+
+#### Array Methods in JavaScript.
+
+Adding / Removing Elements.
+
+push(item); add element to the end.</br>
+pop(); remove element from the end.</br>
+unshift(item); add element to the start. </br>
+shift(); remove element from the start. </br>
+splice(start, deletecount, items);  add/remove at specific index. `fruits.splice(1, 1, "Peach"); // removes 1 item at index 1, adds "Peach"`
+map();
+Return a new array with modified values.
 
 Q.18.. Function.
 function are blocks of reuseable logic,
@@ -264,14 +342,6 @@ Q.26 Why used IIFE?
 to avoid polluting global scope.
 to initilize code once.(setup tasks, configs)
 often used in modules & Js pattern.
-
-Q.27  Array.
-
-An array is a collection of items or values, stored in single variable, and each value can be accessed using its index. (starting from 0).
-
-Iteration Method,
-map();
-Return a new array with modified values.
 
 
 Q.28.   DOM (Document Object Model)
