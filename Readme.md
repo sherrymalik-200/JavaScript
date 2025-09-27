@@ -270,11 +270,27 @@ Saves time and makes code cleaner.
 
 Adding / Removing Elements.
 
-push(item); add element to the end.</br>
-pop(); remove element from the end.</br>
-unshift(item); add element to the start. </br>
-shift(); remove element from the start. </br>
-splice(start, deletecount, items);  add/remove at specific index. `fruits.splice(1, 1, "Peach"); // removes 1 item at index 1, adds "Peach"`
+push(item);    add element to the end.</br>
+pop();         remove element from the end.</br>
+unshift(item);     add element to the start. </br>
+shift();       remove element from the start. </br>
+splice(start, deletecount, items);      add/remove at specific index. `fruits.splice(1, 1, "Peach"); // removes 1 item at index 1, adds "Peach"`
+slice(start, end);     return part of array (does not change original)  `let citrus = fruits.slice(1, 3); // ["Peach", "Mango"]`
+
+#### 🔹 Searching / Finding.
+
+indexOf(item);   first index of item (or -1 if not found).
+
+lastIndexOf(item)    last index of item.
+
+includes(item);    check if array contain item.  `fruits.includes("Apple"); // true`
+
+find(callback);     Returns first element that matches condition.   
+`let num = [1, 5, 10, 15];
+num.find(n => n > 9); // 10 `
+
+
+
 map();
 Return a new array with modified values.
 
