@@ -3,7 +3,7 @@
 - A variable is a like label container used to store value or data in memory.
 - const name = "sheraz"
 - const dob = 23-03----
-### how many stages of variable and funcion?
+#### how many stages of variable and funcion?
 
 variable have 3 stages 
   - Decleration phase: let a;
@@ -383,6 +383,42 @@ isStudent:false,
 greet:function(){}
 };
 ```
+#### when use object and when use array?
+array: best for list of items.
+Object: best for decribing a single item with multiple details.
+
+Example:
+
+A car → { brand: "Toyota", model: "Corolla", year: 2022 }
+
+A student → { name: "Ali", age: 20, subjects: ["Math", "CS"] }
+
+Array → Like a list (chorai / breadth).
+
+You just know the items one by one.
+
+Example: [ "Ali", "Ahmad", "Sara" ] → Just names, no details.
+
+Object → Like a profile card (gehrai / depth).
+
+You go into the details of one item.
+`{ name: "Ali", age: 20, city: "Lahore" }`
+
+#### Object methods.
+A) Getting Keys / Values / Entries
+
+Object.keys(obj) → Returns all keys in an array.
+`const person = { name: "Ali", age: 20 };
+console.log(Object.keys(person)); // ["name", "age"]`
+
+Object.values(obj) → Returns all values in an array.
+`console.log(Object.values(person)); // ["Ali", 20]`
+
+Object.entries(obj) → Returns [key, value] pairs in an array.
+`console.log(Object.entries(person));
+// [["name", "Ali"], ["age", 20]]`
+### I use Object.entries() with for...of because it’s more reliable (no unwanted inherited keys) and easier (I get both key and value at once).
+
 
 
 
