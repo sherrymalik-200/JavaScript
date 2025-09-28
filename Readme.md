@@ -479,16 +479,22 @@ console.log(obj2); // { a: 1, b: 2, c: 3 }`
 
 
 
-Q.18.. Function.
-function are blocks of reuseable logic,
+#### Q.18.. Function.
+A function is a reuseable block of code that performs a specific task.
 instead of repeating the task again and again. wrap it in a function and reuse it with differenct inputs. Function keep code clean, DRY, and reuseable.
 
-Q.19  Difference b/w parameter vs arguments?
+#### Q.19  Difference b/w parameter vs arguments?
 parameter:  variable in function defination.
 argument: actual value given when a function called. 
 
-Q.20  What is function decleration?
+#### Q.20 (1) What is function decleration?
 function declaration is defining a function, with the function keyword, and it is hoisted.
+```js
+function greet(){
+console.log('welcome');
+}
+greet();
+```
 Q.21 What is function expression?
 defining a function inside a variable. and its not hoisted.
 
