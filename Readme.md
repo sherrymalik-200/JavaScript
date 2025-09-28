@@ -425,7 +425,8 @@ Object.entries(obj) → Returns [key, value] pairs in an array.
 B) Creating / Copying Objects
 
 Object.assign(target, source) → Copies properties from source(s) into target.
-`const obj1 = { a: 1 };
+```js
+const obj1 = { a: 1 };
 const obj2 = { b: 2 };
 const result = Object.assign({}, obj1, obj2);
 console.log(result); // { a: 1, b: 2 }`
