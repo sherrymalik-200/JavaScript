@@ -455,6 +455,25 @@ Object.seal(car);
 car.brand = "Toyota"; // ✅ works
 car.model = "Civic";  // ❌ no effect
 ```
+#### D) Checking Properties
+
+Object.hasOwn(obj, key) (new ES2022) → Checks if key exists directly on object.
+`const person = { name: "Ali" };
+console.log(Object.hasOwn(person, "name")); // true
+console.log(Object.hasOwn(person, "age"));  // false`
+
+#### 🔹 3. Modern Useful Tricks
+
+Destructuring (not a method, but often used with objects):
+`const person = { name: "Ali", age: 20 };
+const { name, age } = person;
+console.log(name, age); // Ali 20`
+
+Spread Operator (…):
+`const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 };
+console.log(obj2); // { a: 1, b: 2, c: 3 }`
+
 
 
 
