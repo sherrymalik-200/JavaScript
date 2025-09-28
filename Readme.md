@@ -274,8 +274,16 @@ push(item);    add element to the end.</br>
 pop();         remove element from the end.</br>
 unshift(item);     add element to the start. </br>
 shift();       remove element from the start. </br>
-splice(start, deletecount, items);      add/remove at specific index. `fruits.splice(1, 1, "Peach"); // removes 1 item at index 1, adds "Peach"`
-slice(start, end);     return part of array (does not change original)  `let citrus = fruits.slice(1, 3); // ["Peach", "Mango"]`
+splice(start, deletecount, items); 
+
+Used for custom adding, removing, or replacing elements, and it changes the original array
+
+add/remove at specific index. `fruits.splice(1, 1, "Peach"); // removes 1 item at index 1, adds "Peach"`
+
+slice(start, end); 
+
+Used to make a copy or subset of an array without changing the original.
+return part of array (does not change original)  `let citrus = fruits.slice(1, 3); // ["Peach", "Mango"]`
 
 #### 🔹 Searching / Finding.
 
@@ -289,10 +297,47 @@ find(callback);     Returns first element that matches condition.
 `let num = [1, 5, 10, 15];
 num.find(n => n > 9); // 10 `
 
+#### 🔹 Iteration / Transformation.
 
+forEach(callback) => Runs function for each element.
+`fruits.forEach(f => console.log(f));`
 
-map();
+map(callback);
 Return a new array with modified values.
+`let upper = fruits.map(f => f.toUpperCase());`
+
+fitler(callback);
+create new array with matching condition.   
+`let longNames = fruits.filter(f => f.length > 5);`
+
+reduce(callback, initialValue);
+Reduce array in single value.
+
+`let numbers = [10, 20, 30];
+let sum = numbers.reduce((a, b) => a + b, 0); // 60 `
+
+#### 🔹 Sorting / Reversing
+
+sort();
+sort array alphabatically by default. 
+`fruits.sort(); // ["Apple", "Banana", "Mango"]`
+reverse();
+reverse order.
+
+#### 🔹 Conversion.
+
+join(seperator);
+convert array to string. 
+`fruits.join(" - "); // "Apple - Banana - Mango"`
+
+toString();
+converts array to comma seperated string.
+
+concat();
+combines array.
+`let newArr = fruits.concat(["Pineapple", "Kiwi"]);`
+
+
 
 Q.18.. Function.
 function are blocks of reuseable logic,
