@@ -337,6 +337,53 @@ concat();
 combines array.
 `let newArr = fruits.concat(["Pineapple", "Kiwi"]);`
 
+👉 Difference memory trick:
+
+includes → Yes/No
+
+find → Value
+
+findIndex → Location
+
+2. 🎭 Transformation Methods
+
+map() → returns new array (same length, transformed items).
+
+filter() → returns new array (smaller, only items that pass).
+
+reduce() → returns one single value.
+
+👉 Trick:
+
+map → all change
+
+filter → some kept
+
+reduce → all into one
+
+3. 🌀 Iteration / Looping
+
+forEach() → just runs code for each item, no return.
+
+for...of → loop that you can break/continue.
+
+👉 Trick:
+
+forEach → action only
+
+for...of → action with control
+
+#### Object.
+An object is a collection of key-value pair. keys are always string(or symbols) and value can be anything(number, string, array, function, another object etc)
+```js
+const person = {
+name:"sheraz",
+age:28;
+isStudent:false,
+greet:function(){}
+};
+```
+
 
 
 Q.18.. Function.
