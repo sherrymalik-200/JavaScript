@@ -429,17 +429,16 @@ Object.assign(target, source) → Copies properties from source(s) into target.
 const obj1 = { a: 1 };
 const obj2 = { b: 2 };
 const result = Object.assign({}, obj1, obj2);
-console.log(result); // { a: 1, b: 2 }`
-
+console.log(result); // { a: 1, b: 2 }
+```
 Object.create(proto) → Creates a new object with a given prototype.
 ```js
 const proto = { greet: () => console.log("Hello") };
 const obj = Object.create(proto);
 obj.greet(); // Hello
-`
-Object.freeze(obj) → Makes object immutable (no add/remove/change).
+```
 
-📌 C) Property Control
+#### 📌 C) Property Control
 
 Object.freeze(obj) → Makes object immutable (no add/remove/change).
 ```js
@@ -447,7 +446,7 @@ const car = { brand: "Honda" };
 Object.freeze(car);
 car.brand = "Toyota"; // ❌ no effect
 console.log(car.brand); // "Honda"
-`
+```
 
 Object.seal(obj) → Can’t add/remove properties, but can change existing values.
 ```js
@@ -455,7 +454,7 @@ const car = { brand: "Honda" };
 Object.seal(car);
 car.brand = "Toyota"; // ✅ works
 car.model = "Civic";  // ❌ no effect
-`
+```
 
 
 
