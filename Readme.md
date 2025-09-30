@@ -490,13 +490,193 @@ argument: actual value given when a function called.
 #### Q.20 (1) What is function decleration?
 function declaration is defining a function, with the function keyword, and it is hoisted.
 ```js
-function greet(){
-console.log('welcome');
+function sum(a,b){
+return a+b;
 }
-greet();
+sum(2,3);
 ```
-Q.21 What is function expression?
-defining a function inside a variable. and its not hoisted.
+used.  when want reuseability and hoisted , avoid when dont want hoisted.
+
+#### Q.21 (2) What is function expression?
+A function stored inside a variable, not hoisted.
+```js
+const sum = function(a,b){
+  return a+b;
+}
+sum(2,3);
+```
+used. when need function assign to variable and do later something on this.
+
+####  Arrow function(ES6).
+
+A shorter syntax for function, doesn't have its own `this`
+
+`const multiply = (a, b) => a * b;
+console.log(multiply(4, 2)); // 8`
+
+shorter syntax,  great for callbacks (map, filter, foeach). 
+keep `this` from outer scope. (important in classes, object).
+Not suitable when need function its own `this` (like object method or constructur)
+
+#### Anonymous Function
+
+Function without a name, usually used inside other functions.
+
+`setTimeout(function() {
+  console.log("Hello after 2 seconds");
+}, 2000);
+`
+Good for temporary, one time use,
+Hard to debug since it has no name.
+
+
+#### IIFE.(immediately invoked function expression).
+
+A function that runs immediately, after its defined.
+`(function() {
+  console.log("I run immediately!");
+})();
+`
+used for initilization and to avoid polluting global scope.  but but rarly needed in modern JS (module replace it)
+
+
+#### Constructur function. 
+
+A function used with `new` to create objects. (like a blueprint)
+`
+function Person(name) {
+  this.name = name;
+}
+const p1 = new Person("Sheraz");
+console.log(p1.name); // Sheraz
+`
+used  for creating objects  before es6 classes existed 
+now replaced mostly by classes. 
+
+#### Generator function.
+
+A function that can pause and resume using yield.
+```js
+function* generateNumbers() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+const gen = generateNumbers();
+console.log(gen.next().value); // 1
+```
+✅ Useful for iterators and handling async flow.
+❌ Not for everyday coding—use only when needed.
+
+#### Async function
+
+A function that return a promise and use await for async code .
+```js
+async function fetchData() {
+  return "Data received";
+}
+fetchData().then(console.log);
+```
+✅ Used when dealing with promises and async/await (APIs, DB calls).
+❌ Don’t use if code is purely synchronous.
+
+#### commonly used function in modern js. 
+1. Function Declaration
+Still used for reusable utility functions and when hoisting is helpful.
+
+2. Function Expression (with const)
+Useful when you want control over scope and don’t care about hoisting.
+
+3. Arrow Function (Most Popular)
+Modern default choice for short functions and callbacks.
+
+4. Async Function (with await)
+Standard for APIs, database calls, async tasks.
+
+5. Class Methods (uses arrow functions for callbacks inside)
+In OOP, modern JS prefers class + arrow for event handlers.
+
+in async function we discuss asyn and await and promises becuase async function always return promises.
+
+#### Q.41 – Promises, and async/await<br>
+Promises = A promises is an object that represents a value that will be available now, later, or never.
+**Async/Await**  
+- `async` makes a function return a promise.  
+- `await` makes JavaScript wait until the promise settles.  
+- Cleaner alternative to `.then()` and `.catch()`.
+- old way write `.then()` and `.catch()`. new version is await.
+
+#### 3 stages of promises.
+1. Pending.   operation or task not finished yet.
+2. Fulfilled. operation or task sucessful, you got the value.
+3. Rejected. operation or task failed, you got the an error.
+
+#### 🔹 2. Why do we need Promises?
+
+before promises async code was handled by callback.
+
+Callbacks worked, but led to callback hell (nested functions, unreadable code).
+
+then promises come 
+1. to solve callback hell.
+2. to make async code is eaiser.
+3. to improve error handling with .catch().
+
+#### 🔹 5. When to Use Promises
+
+doing async work like.
+
+- API call(fetch, axios)
+- Database queries.
+- file reading (node.js)
+- timers, background tasks.
+
+callback hell.
+```js
+function fetchData(callback) {
+    setTimeout(() => {
+        callback("Data received");
+    }, 2000);
+}
+
+fetchData((result) => {
+    console.log(result);
+});
+```
+Promise way (better):
+```js
+function fetchData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data received");
+        }, 2000);
+    });
+}
+
+fetchData().then(result => console.log(result));
+```
+Promises + Async/Await
+```js
+async function getData() {
+    const result = await fetchData();
+    console.log(result);
+}
+getData();
+```
+How does await handle things?
+
+When JS sees await promise, it pauses only that async function, not the whole program.
+
+While paused, JS engine is free to run other tasks (non-blocking).
+
+When the Promise resolves → it resumes from that point with the resolved value.
+
+So:
+
+.then() → chaining style
+
+await → pause/resume style (looks like synchronous code, but is still async under the hood).
+
 
 Q.21 What is First-class function?
 Js function are first class citizen, meaning they can be stored in variable. passed as argument, and returned from other function just like anyother value.
@@ -638,12 +818,7 @@ JS is sync by default(single threaded, one line at a time). async programming le
 
 Q. 40 what is callback pattern and callback hell?
 The callback pattern means passing a function as an argument to be executed later, often for async task. callback hell happens when many callback are nested, creating unreadable and unmaintainable code.
-## Q.41 – Promises, and async/await<br>
-Promises = A promises is an object that represents a value that will be available now, later, or never.
-**Async/Await**  
-- `async` makes a function return a promise.  
-- `await` makes JavaScript wait until the promise settles.  
-- Cleaner alternative to `.then()` and `.catch()`.
+
 
 
 
