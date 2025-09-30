@@ -677,35 +677,68 @@ So:
 
 await → pause/resume style (looks like synchronous code, but is still async under the hood).
 
+.then() and await both handle Promises.
 
-Q.21 What is First-class function?
+.then() → callback chain.
+
+await → makes async code look like synchronous, more readable.
+
+But await only works inside an async function.
+
+
+#### What is First-class function?
 Js function are first class citizen, meaning they can be stored in variable. passed as argument, and returned from other function just like anyother value.
+(Concept, not a special type.)
 
 Note: This property is the foundation of callbacks, High Order function, promises, async/await, and functional programming.
 
-Q.22 What is High order function?
-A high order function is a function that either takes another function as input, returns a function or both. They allow powerfull abstractins like callbacks and functional programming.
+#### What is High order function?
+A function that accepts another function as an argument OR returns a function or both. like a parent function
+(Example: map, filter, reduce, setTimeout.)
 
-Q.23 Lexical scope, closures 
-Lixical scope, Decide karta hai ke inner function ko outer function ke variable ki access hai(sirf likhne ki jaga dekh kar).
-
-Lexical Scope → Scope decided by where function is defined (code placement).
-
-Dynamic Scope → Scope decided by where function is called (call site).
-function outer() {
-  let x = 10;
-
-  function inner() {
-    console.log(x);  // inner ko outer ke variable ki access hai
-  }
-
-  return inner;
+#### Callback Function
+The function that is passed into another function is called a callback.
+The function that receives it is the higher-order function.
+```js
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();  // function called inside another function
 }
 
-let fn = outer();
-fn(); // 10
+function afterGreeting() {
+  console.log("Welcome to JavaScript!");
+}
 
-Q.24 Closures. Wo mechanism  hai, jo ensure karta hai ke jab outer function chal kar khatam bhe ho jaye. inner function ke pass outer ke variable ki access phir bhe ho.
+greet("Sheraz", afterGreeting);
+```
+
+### Quick cheat-sheet (one-sentence definitions)
+
+Function: reusable code block.
+
+First-class: functions are values.
+
+Higher-order: takes/returns functions.
+
+Callback: function passed to another to be called later.
+
+Callback hell: nested callbacks leading to unreadable code.
+
+Promise: object representing a future value (pending/fulfilled/rejected).
+
+.then() chaining: handle promise resolution sequentially.
+
+async/await: syntactic sugar over promises making async code look synchronous.
+
+#### Lexical scope, closures 
+
+Lexical scope means inner function can access outer function variable.
+
+#### Closure.
+
+Closure mean inner function remember outer function variable. even outer function executed or done.
+
+
 function outer() {
   let counter = 0;   // outer ka variable
 
