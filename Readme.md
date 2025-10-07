@@ -19,9 +19,9 @@ if we dont store value, we cant reuse them.
 #### Q.3 What is the difference b/w var, let and const.
 - var is function-scoped, let and const are block-scoped.
 #### explain this,
-- var: function scoped, hoisted , can be redeclared and reassignment.
-- let: block-scoped, not hoisted, can be reassigned but not redeclared in the same scope.
-- const: block-scoped, not hoisted, cannot be reassigned and redeclared.
+- var: function scoped, can be redeclared and reassign.
+- let: block-scoped,  can be reassigned but not redeclared in the same scope.
+- const: block-scoped,cannot be reassigned and redeclared.
 
 example.
 ```js
