@@ -464,12 +464,17 @@ console.log(Object.hasOwn(person, "age"));  // false`
 
 #### 🔹 3. Modern Useful Tricks
 
-Destructuring (not a method, but often used with objects):
+Destructuring 
+
+“Destructuring is used to unpack values from arrays or objects into separate variables.”
+
 `const person = { name: "Ali", age: 20 };
 const { name, age } = person;
 console.log(name, age); // Ali 20`
 
-Spread Operator (…):
+Spread Operator (...):
+
+“The spread operator is used to copy or combine arrays and objects by expanding their elements.”
 `const obj1 = { a: 1, b: 2 };
 const obj2 = { ...obj1, c: 3 };
 console.log(obj2); // { a: 1, b: 2, c: 3 }`
